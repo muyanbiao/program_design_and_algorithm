@@ -1,6 +1,6 @@
 # 课程链接
-[计算导论与C语言基础](https://www.coursera.org/learn/jisuanji-biancheng?specialization=biancheng-suanfa)  
-[C程序设计进阶](https://www.coursera.org/learn/c-chengxu-sheji?specialization=biancheng-suanfa)
+1. [计算导论与C语言基础](https://www.coursera.org/learn/jisuanji-biancheng?specialization=biancheng-suanfa)  
+2. [C程序设计进阶](https://www.coursera.org/learn/c-chengxu-sheji?specialization=biancheng-suanfa)
 
 # 内容简介
 * 本文件夹下包含C程序设计基础和进阶课程的实现代码
