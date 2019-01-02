@@ -1,2 +1,3 @@
-# program_design_and_algorithm
-程序设计与算法_北京大学Coursera公开课
+# 程序设计与算法
+## 北京大学Coursera公开课
+学习笔记和代码实现
