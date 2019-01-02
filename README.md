@@ -7,4 +7,4 @@
 ### 主要包含以下内容
 1. 学习笔记
 2. 课后练习解法和代码实现
-3. 学习成就
+3. [已取得的学习成就](https://github.com/muyanbiao/program_design_and_algorithm/tree/master/achievement)
