@@ -28,7 +28,8 @@
 	- 数据结构：
 		- 相邻矩阵
 	- 算法抽象
-		- 最短路径
+		- 最短路径  
+		
 ![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens1.png)
 
 ![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens2.png)
