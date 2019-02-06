@@ -6,7 +6,7 @@
 * 数据结构的选择和评价
 
 ---
-1. 问题求解
+1. **问题求解**
 	* 编写计算机程序的目的？
 		- 解决实际的应用问题
 	- **问题抽象**
@@ -52,16 +52,16 @@
 	* 数据结构：
 		* **按照逻辑关系**组织起来的一批数据
 		* 按一定的**存储方法**把它存储在计算机中
-		* 在这些数据上定义了一个**运算**集合
+		* 在这些数据上定义了一个**运算**集合  
 		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da1.png)
 		1. 数据结构的**逻辑组织**
 			* 线性结构
-				* 线性表（表、栈、队列、串等）
+				* 线性表（表、栈、队列、串等）  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da2.png)
 			* 非线性结构
-				* 树（二叉树、Huffman树、二叉检索树等）
+				* 树（二叉树、Huffman树、二叉检索树等）  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da3.png)
-				* 图（有向图、无向图等）				
+				* 图（有向图、无向图等）  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da4.png)
 			* 图 ⊇ 树 ⊇ 二叉树 ⊇ 线性表
 		2. 数据的**存储结构**
@@ -69,22 +69,22 @@
 		   **计算机主存储器**
 			* **非负整数**地址编码，**相邻单元**的集合
 				* 基本单位是字节
-				* 访问不同地址所需的时间基本相同（即随机访问）
+				* 访问不同地址所需的时间基本相同（即随机访问）  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da5.png)
 			* 对逻辑结构（K, r）, 其中r∈R
-				* 对节点集K建立一个从K到存储器M的单元的映射：K —> M，对于每一个节点 j∈K 都对应一个**唯一**的**连续存储**区域 c∈M
+				* 对节点集K建立一个从K到存储器M的单元的映射：K —> M，对于每一个节点 j∈K 都对应一个**唯一**的**连续存储**区域 c∈M  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da6.png)
 			* 关系元组（j1,j2）∈ r（其中j1,j2 ∈ K 是结点）
-				* 顺序：存储单元的顺序地址
+				* 顺序：存储单元的顺序地址  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da7.png)
-				* 链接：指针的地址指向关系
+				* 链接：指针的地址指向关系  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da8.png)
 			* 四类：**顺序、链接、索引、散列**
 		3. **抽象数据类型**
 			* 简称**ADT**（Abstract Data Type）
 				- 定义了一组运算的数学模型
 				- 与物理存储结构无关
-				- 使软件系统建立在数据之上（面向对象）
+				- 使软件系统建立在数据之上（面向对象）  
 				![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/da1.png)
 			* **模块化**的思想的发展
 				- 隐藏运算实现的细节和内存数据结构
