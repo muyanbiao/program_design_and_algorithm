@@ -28,10 +28,10 @@
 		- 定点表示”原岸状态“ —— 10种（包括”空“）
 		- 边：一次合理的渡河操作实现的状态转变  
 		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens2.png)  
-	- 数据结构：
+	- **数据结构**：
 		- 相邻矩阵  
 		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens3.png)
-	- 算法抽象
+	- **算法抽象**
 		- 最短路径  
 ## 思考：问题求解过程
 * 农夫过河问题 —— 最短路径模型
