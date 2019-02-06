@@ -21,22 +21,18 @@
 	* **问题描述**：人狼羊菜乘船过河
 		- 只有人能撑船
 		- 船只有两个位置（包括人）
-		- 狼羊、羊菜不能在没有人时共处
+		- 狼羊、羊菜不能在没有人时共处  
+		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens1.png)  
 	- **数据抽象**：图模型
 		- 不合理状态：狼羊、人菜、羊菜、人狼、狼羊菜、人
 		- 定点表示”原岸状态“ —— 10种（包括”空“）
-		- 边：一次合理的渡河操作实现的状态转变
+		- 边：一次合理的渡河操作实现的状态转变  
+		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens2.png)  
 	- 数据结构：
-		- 相邻矩阵
+		- 相邻矩阵  
+		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens3.png)
 	- 算法抽象
 		- 最短路径  
-		  
-![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens1.png)  
-  
-![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens2.png)  
-  
-![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/man_wolf_sheep_greens3.png)
-
 ## 思考：问题求解过程
 * 农夫过河问题 —— 最短路径模型
 	* 问题抽象？
@@ -45,9 +41,7 @@
 	* 不妨编程序模拟实现
 
 ---
----
-
- 2. **什么是数据结构？**
+2. **什么是数据结构？**
 	* 结构：实体+关系
 	* 数据结构：
 		* **按照逻辑关系**组织起来的一批数据
