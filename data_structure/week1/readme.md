@@ -226,7 +226,7 @@
 * **皇后问题（四皇后）**  
 	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg1.png)
 	- 解<x1, x2, x3, x4>（放置列号）
-	- 搜索空间：4叉树（排列树）
+	- 搜索空间：4叉树（排列树）  
 	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg2.png)
 * **基本算法分类**
 	* 穷举法
@@ -239,7 +239,7 @@
 		- Huffman编码树、最短路Dijkstra算法、最小生成树Prim算法
 	* 动态规划
 		- 最短路Floyd算法
-* **顺序找K值**
+* **顺序找K值**  
 ![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg3.png)
 
     ```
@@ -286,8 +286,8 @@
             	return 0;								// 检索失败，返回0
             }
             ```
-	- 二分法检索图示
-	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg4.png)
+	- 二分法检索图示  
+	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg4.png)  
 检索关键码18	low=1	high = 9		K = 18
         ```
         第一次：mid = 5; array[5] = 35 > 18
