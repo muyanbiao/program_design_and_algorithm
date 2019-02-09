@@ -223,7 +223,83 @@
 	* 有穷性
 		- 算法的执行必须在有限步内结束
 		- 换句话说，算法不能含有死循环
-- **皇后问题（四皇后）**  
+* **皇后问题（四皇后）**  
 	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg1.png)
 	- 解<x1, x2, x3, x4>（放置列号）
-	- 搜索空间：4叉树（排列树）
+	- 搜索空间：4叉树（排列树）  
+	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg2.png)
+* **基本算法分类**
+	* 穷举法
+		- 顺序找K值
+	* 回溯、搜索
+		- 八皇后、树和遍历
+	* 递归分治
+		- 二分找K值、快速排序、归并排序
+	* 贪心法
+		- Huffman编码树、最短路Dijkstra算法、最小生成树Prim算法
+	* 动态规划
+		- 最短路Floyd算法
+* **顺序找K值**  
+![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg3.png)
+
+    ```
+    template <class Type>
+    class Item
+    {
+    private:
+    	Type key;							// 关键码域
+    										// 其他域
+    public:
+    	Item(Type value):key(value) {}
+    	Type getKey() {return key;}		// 取关键码
+    	void setKey(Type k) { key = k;}	// 置关键码
+    };
+    
+    vector<Item<Type> *> dataList;
+    template <class Type> int SeqSearch(vector<Item<Type>*> &dataList, int length, Type k) {
+    	int i = length;
+    	dataList[0]->setKey(k);			// 将第0个元素设置为待检索值，设监视哨
+    	while(dataList[i]->getKey != k) i--;
+    	return i;							// 返回元素位置
+    }
+    ```
+* **二分法找k值**
+对于已排序顺序线性表
+	* 数组中间位置的元素值Kmid
+		- 如果Kmid = k，那么检所工作就完成了
+		- 当Kmid > k时，检索继续在前半部分进行
+		- 相反地，若Kmid < k，就可以忽略mid以前的那部分，检索继续在后半部分进行
+	* 快速
+		- Kmid = k 结束
+		- Kmid != k 起码缩小了一半的检索范围
+            ```
+            template <class Type> int BinSearch(vector<Item<Type>*> &dataList, int length, Type k) {
+            	int low = 1, high = length, mid;
+            	while (low <= high) {
+            		mid = (low + high) / 2;
+            		if (k < dataList[mid]->getKey())
+            			high = mid - 1;					// 右缩检索区间
+            		else 
+            			low = mid + 1;					// 左缩检索区间
+            		else return mid;					// 成功返回位置
+            	}
+            	return 0;								// 检索失败，返回0
+            }
+            ```
+	- 二分法检索图示  
+	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg4.png)  
+检索关键码18	low=1	high = 9		K = 18
+        ```
+        第一次：mid = 5; array[5] = 35 > 18
+        		high = 4; (low = 1)
+        第二次：mid = 2; array[2] = 17 < 18
+        		low = 3; (high = 4)
+        第三次：mid = 3; array[3] = 18 = 18
+        		mid = 3; return 3;
+        ```
+* **思考：算法的时空限制**
+> 设计一个算法，将数组A(0…n-1)中的元素循环右移k位，假设原数组序列为a0,a1,…,an-2,an-1;移动后的序列为an-1,an-k+1,…a0,a1,…,an-1-1。要求只用一个元素大小的附加存储，元素移动或交换次数与n线性相关。例如 ~n = 10, k = 3~  
+
+原始数据：`0 1 2 3 4 5 6 7 8 9`  
+右移后的：`7 8 9 0 1 2 3 4 5 6`  
+![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg5.png)
