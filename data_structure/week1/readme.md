@@ -303,3 +303,113 @@
 原始数据：`0 1 2 3 4 5 6 7 8 9`  
 右移后的：`7 8 9 0 1 2 3 4 5 6`  
 ![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/alg5.png)
+
+---
+4. 算法的效率度量
+	1. 算法的渐进分析
+		* **f(n) = n2 + 100n + log10n + 1000**
+		* 数据规模n逐步增大时，f(n)的增长趋势
+		* 当n增大到一定值后，计算公式中影响最大的就是n的幂次最高的项
+			- 其他的常数项和低幂次项都可以忽略
+	2. 算法渐进分析：**大O表示法**
+		* 函数f，g定义域为自然数，值域为非负实数集
+		* **定义**：如果存在正数c和n0，使得对任意的*n>=n0*，都有*f(n) < cg(n)*
+		* 称f(n)在集合O(g(n))中，简称f(n)是O(g(n))的，或f(n) = O(g(n))
+		* 大O表示法：表达函数增长率上限
+			- 一个函数的增长率上限可能不止一个
+		* 当上下限相同时则可用Θ表示法
+		* f(n) = O(g(n))，当且仅当
+			- 存在两个参数c > 0, n0 > 0，对于所有的n ≥ n0，都有f(n) ≤ cg(n)
+		* iff  ∃ c, n0 > 0 s.t. ∀ n ≥ n0 : 0 ≤ f(n) ≤ cg(n)  
+        ![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure1.png)
+	3. 大Ο表示法的**单位时间**
+		* 简单布尔或算数运算
+		* 简单I/O
+			- 指函数的输入/输出
+				- 例如：从数组读数据等操作
+			- 不包括键盘文件等I/O
+		- 函数返回
+	4. 大Ο表示法的**运算法则**
+		* **加法规则**：f1(n) + f2(n) = O(max(f1(n), f2(n)))
+			- 顺序结构：if结构，switch结构
+		* **乘法规则**：f1(n)*f2(n) = O(f1(n)*f2(n))
+			- for, while, do-while语句  
+		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure2.png)
+	5. 算法渐进分析：**大Ω表示法**
+		* **定义：**如果存在正数c和n0，使得对所有的n ≥ n0，都有*f(n) ≥ cg(n)*，则称f(n)在集合Ω(g(n))中，或简称f(n)是Ω(g(n))的，或f(n) = Ω(g(n))
+		* 大O表示法和大Ω表示法的唯一区别在于不等式的方向而已
+		* 采用大Ω表示法时，最好找出在函数增长率的所有下限中**最”紧”**（即最大）的下限
+		* f(n) = Ω(g(n))
+			- iff  ∃ c, n0 > 0 s.t. ∀ n ≥ n0 : 0 ≤ cg(n) ≤ f(n) 
+		* 与大O表示法的唯一区别在于不等式的方向  
+		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure3.png)
+	6. 算法渐进分析：**大Θ表示法**
+		* 当上下限相同时则使用大Θ表示法
+		* 定义如下：
+			* 如果一个函数既在集合O(g(n))中又在集合Ω(g(n))中，则称其为Θ(g(n))
+		* 也即，当上下限相同时则可用大Θ表示法
+		* 存在正常数c1,c2，以及正整数n0，使得对于任意n>n0，有以下两不等式同时成立：
+			- c1g(n) ≤ f(n) ≤ c2g(n)
+		* **f(n) = Θ(g(n))** 
+			- iff  ∃ c1, c2, n0 > 0 s.t. c1g(n) ≤ f(n) ≤ c2g(n), ∀ n ≥ n0  
+		![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure4.png)
+	7. **增长率函数曲线**  
+	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure5.png)
+	8. **问题空间 VS 时间开销**  
+	![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure6.png)
+	9. **顺序找K值**
+		* 顺序从一个规模为n的一位数组中找出一个给定的K值
+		* 最佳情况
+			- 数组中第一个元素就是K
+			- 只要检查一个元素
+		* 最差情况
+			- K是数组的最后一个元素
+			- 检查数组中的所有n个元素
+		* 如果等概率分布
+			- K值出现在n个位置上概率都是1/n
+			- 则平均代价为O(n)  
+			![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure7.png)
+		* 如果概率不等
+			- 出现在第1个位置的概率为1/2
+			- 第2个位置上的概率为1/4
+			- 出现在其他位置的概率都是  
+			![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure8.png)
+			- 平均代价为O(n)  
+			![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure9.png)
+	10. **二分法找K值**
+	**对于已排序顺序线性表**  
+		* 数组中间的元素值Kmid
+			- 如果Kmid = k，那么检所工作就完成了
+			- 当Kmid > k时，检索继续在前半部分进行
+			- 相反地，若Kmid < k，就可以忽略mid以前的那部分，检索继续在后半部分进行
+		* 快速
+			- Kmid = k结束
+			- Kmid ≠ k起码缩小一半的检索范围
+		- 二分法检索性能分析
+			- 最大检索长度为  
+			![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure10.png)
+			- 失败的检索长度为  
+			![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure11.png)或 ![image](https://github.com/muyanbiao/program_design_and_algorithm/blob/master/data_structure/week1/Resources/algMeasure12.png)
+			- 平均检索代价为O(logn)
+			- 在算法复杂性分析中
+				- logn是以2为底的对数
+				- 以其他数值为底，算法量级不变
+	11. **时间/空间权衡**
+		* **数据结构**
+			- 一定的空间来存储它的每一个数据项
+			- 一定的时间来执行单个基本操作
+		* **代价和效益**
+			- 空间和时间的限制
+			- 软件工程
+		* 增大空间开销可能改善算法的时间开销
+		* 可以节省空间，往往需要增大运算时间
+	12. **数据结构和算法的选择**
+		* 仔细分析所要解决的问题
+			- 特别是求解问题所涉及的数据类型和数据间逻辑关系 —— 问题抽象、数据抽象
+			- 数据结构的初步设计往往先于算法设计
+		* 注意数据结构的可扩展性
+			- 考虑当输入数据的规模发生改变时，数据结构能否适应求解问题的演变和扩展
+
+    * **思考：数据结构和算法的选择**
+    	* 问题求解的目标
+    	* 数据结构和算法的选择过程
