@@ -21,7 +21,7 @@ class C:public B {
         void Fun()
         { cout << "C::Fun" << endl; }
 };
-void Call(B *p) {
+void Call(A *p) {
     p->Fun(); p->Do();
 }
 int main() {
