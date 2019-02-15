@@ -123,7 +123,7 @@ Warrior::Warrior(Warrior &warrior) {
 class Dragon : public Warrior {
 private:
     WeaponType weaponType;
-    float morale;
+    float morale; // 士气
 
 public:
     Dragon(Warrior warrior):Warrior(warrior){}
@@ -186,7 +186,7 @@ public:
 
 class Lion : public Warrior {
 private:
-    int loyalty;
+    int loyalty; // 忠诚度
 
 public:
     Lion(Warrior warrior):Warrior(warrior){}
