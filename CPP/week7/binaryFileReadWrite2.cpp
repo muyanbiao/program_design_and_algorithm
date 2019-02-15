@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string.h>
 using namespace std;
 
 class CStudent
@@ -11,15 +12,15 @@ public:
 
 int main() {
 	CStudent s;
-	fstream ioFile("students.txt", ios::in|ios::out|ios::binary);
+	fstream ioFile("students.dat", ios::in|ios::out|ios::binary);
 	if (!ioFile)
 	{
 		cout << "error" << endl;
 		return 0;
 	}
 
-	ioFile.seekp(2*sizeof(s), ios::beg);	// 定位写指针到第三个记录
-	ioFile.write("Mike", strlen("Mike"+1));
+	ioFile.seekp(1*sizeof(s), ios::beg);	// 定位写指针到第三个记录
+	ioFile.write("Mike", strlen("Mike")+1);
 	ioFile.seekg(0, ios::beg);	//定位读指针到开头
 
 	while (ioFile.read((char *)&s, sizeof(s))) {
