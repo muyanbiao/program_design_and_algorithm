@@ -1,0 +1,3 @@
+Tom 60
+Jack 80
+Jane 40
